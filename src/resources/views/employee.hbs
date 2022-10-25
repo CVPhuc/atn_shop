@@ -1,0 +1,28 @@
+
+
+<a href="employee/create" class="btn btn-info la la-plus" role="button"> <i></i> Add Employee</a>
+<div class="mt-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                     <th scope="col">Address</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each employees}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.age}}</td>
+                    <td>{{this.address}}</td>
+                     <th>
+                        <a href="employee/{{this._id}}/edit">Edit</a>
+                         <a href="employee/{{this._id}}/delete">Delete</a>
+                     </th>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        </div>

@@ -1,0 +1,35 @@
+<a href="product/create" class="btn btn-info la la-plus" role="button"> <i></i> Add Product</a>
+<div class="mt-6">
+    <div class="row">
+
+        {{#each products}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-product-item" style="margin-top: 15px;">
+
+                <img class="card-img-top" src="./uploads/{{this.img}}" alt="Card image cap">
+
+
+                <div class="card-body">
+
+                    <h5 class="card-title">{{this.name}}</h5>
+
+
+                    <p class="card-text">{{this.des}}</p>
+                     <p class="card-text">Price: {{this.price}}</p>
+                    <a href="product/{{this._id}}/edit" class="btn btn-primary">Edit</a>
+                    <a href="product/{{this._id}}/delete" class="btn btn-primary">Delete</a>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+</div>
+
+
+</script>

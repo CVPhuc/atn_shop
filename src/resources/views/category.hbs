@@ -1,0 +1,26 @@
+
+
+<a href="category/create" class="btn btn-info la la-plus" role="button"> <i></i> Add Category</a>
+<div class="mt-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each categorys}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.des}}</td>
+                     <th>
+                        <a href="category/{{this._id}}/edit">Edit</a>
+                         <a href="category/{{this._id}}/delete">Delete</a>
+                     </th>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        </div>
